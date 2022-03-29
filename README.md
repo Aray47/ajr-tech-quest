@@ -34,6 +34,8 @@ If I had more time to be able to spend on this project there are a few things I 
 
 **vpc**: instead of directing the application to use the default VPC & subnets, it would be more efficient to include a module to be shared within the terraform logic outside of the defaults.
 
+**TLS**: as time was a constraint, I didn't get to explore too much on certificates for AWS. Where I left off was looking at the terraform registry for `aws_acm_certificate` & `aws_acm_certificate_validation`. As far as adding a self-signed certificate goes, it should be as simple as generating it locally using `openssl` commands and editing the listeners in the application load balancer to HTTPS instead of HTTP. We might then need to open port 443 on the security group. 
+
 ## My Process:
 
 This is my attempt at the Rearc cloud technical quest, which includes a web app made with node.js and golang. With the provided code, I pulled that into my own repo and began working.
