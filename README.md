@@ -32,9 +32,9 @@ If I had more time to be able to spend on this project there are a few things I 
 
  **main.tf**: Another shortcoming I've identified in this submission is the fact that all (or most) of my TF logic is stored in `main.tf`. It's quite messy and would not be submitted in a production environment by me, however, with this quest I took as much time as I could to get a working solution. The reason for separating out into modules is reusability & versioning. If we wanted to get real fancy, I would also suggest using remote sources to a git repo for all of the modules. This could make versioning a little easier by utilizing git tags.
 
-**vpc**: instead of directing the application to use the default VPC & subnets, it would be more efficient to include a module to be shared within the terraform logic outside of the defaults.
+**VPC**: instead of directing the application to use the default VPC & subnets, it would be more efficient to include a module to be shared within the terraform logic outside of the defaults.
 
-**TLS**: as time was a constraint, I didn't get to explore too much on certificates for AWS. Where I left off was looking at the terraform registry for `aws_acm_certificate` & `aws_acm_certificate_validation`. As far as adding a self-signed certificate goes, it should be as simple as generating it locally using `openssl` commands and editing the listeners in the application load balancer to HTTPS instead of HTTP. We might then need to open port 443 on the security group. 
+**TLS**: as time was a constraint, I didn't get to explore too much on certificates for AWS. Where I left off was looking at the terraform registry for `aws_acm_certificate` & `aws_acm_certificate_validation`. As far as adding a self-signed certificate goes, it should be as simple as generating it locally using `openssl` commands and editing the listeners in the application load balancer to HTTPS instead of HTTP. We might then need to open port 443 on the security group.
 
 ## My Process:
 
