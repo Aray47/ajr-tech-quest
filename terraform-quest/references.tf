@@ -1,8 +1,8 @@
-# Providing a reference to our default VPC
+# Referencing default VPC
 resource "aws_default_vpc" "default_vpc" {
 }
 
-# Providing a reference to our default subnets
+# Referencing default Subnets
 resource "aws_default_subnet" "default_subnet_a" {
   availability_zone = "us-east-2a"
 }
